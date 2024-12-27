@@ -1,0 +1,17 @@
+C:\Users\admin\Desktop\CassettaSicurezza\ColomboCassettaSicurezza\ColomboCassettaSicurezza\bin\Debug\net6.0-windows\ColomboCassettaSicurezza.exe
+C:\Users\admin\Desktop\CassettaSicurezza\ColomboCassettaSicurezza\ColomboCassettaSicurezza\bin\Debug\net6.0-windows\ColomboCassettaSicurezza.deps.json
+C:\Users\admin\Desktop\CassettaSicurezza\ColomboCassettaSicurezza\ColomboCassettaSicurezza\bin\Debug\net6.0-windows\ColomboCassettaSicurezza.runtimeconfig.json
+C:\Users\admin\Desktop\CassettaSicurezza\ColomboCassettaSicurezza\ColomboCassettaSicurezza\bin\Debug\net6.0-windows\ColomboCassettaSicurezza.dll
+C:\Users\admin\Desktop\CassettaSicurezza\ColomboCassettaSicurezza\ColomboCassettaSicurezza\bin\Debug\net6.0-windows\ColomboCassettaSicurezza.pdb
+C:\Users\admin\Desktop\CassettaSicurezza\ColomboCassettaSicurezza\ColomboCassettaSicurezza\obj\Debug\net6.0-windows\ColomboCassettaSicurezza.Form1.resources
+C:\Users\admin\Desktop\CassettaSicurezza\ColomboCassettaSicurezza\ColomboCassettaSicurezza\obj\Debug\net6.0-windows\ColomboCassettaSicurezza.csproj.GenerateResource.cache
+C:\Users\admin\Desktop\CassettaSicurezza\ColomboCassettaSicurezza\ColomboCassettaSicurezza\obj\Debug\net6.0-windows\ColomboCassettaSicurezza.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admin\Desktop\CassettaSicurezza\ColomboCassettaSicurezza\ColomboCassettaSicurezza\obj\Debug\net6.0-windows\ColomboCassettaSicurezza.AssemblyInfoInputs.cache
+C:\Users\admin\Desktop\CassettaSicurezza\ColomboCassettaSicurezza\ColomboCassettaSicurezza\obj\Debug\net6.0-windows\ColomboCassettaSicurezza.AssemblyInfo.cs
+C:\Users\admin\Desktop\CassettaSicurezza\ColomboCassettaSicurezza\ColomboCassettaSicurezza\obj\Debug\net6.0-windows\ColomboCassettaSicurezza.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\CassettaSicurezza\ColomboCassettaSicurezza\ColomboCassettaSicurezza\obj\Debug\net6.0-windows\ColomboCassettaSicurezza.sourcelink.json
+C:\Users\admin\Desktop\CassettaSicurezza\ColomboCassettaSicurezza\ColomboCassettaSicurezza\obj\Debug\net6.0-windows\ColomboCassettaSicurezza.dll
+C:\Users\admin\Desktop\CassettaSicurezza\ColomboCassettaSicurezza\ColomboCassettaSicurezza\obj\Debug\net6.0-windows\refint\ColomboCassettaSicurezza.dll
+C:\Users\admin\Desktop\CassettaSicurezza\ColomboCassettaSicurezza\ColomboCassettaSicurezza\obj\Debug\net6.0-windows\ColomboCassettaSicurezza.pdb
+C:\Users\admin\Desktop\CassettaSicurezza\ColomboCassettaSicurezza\ColomboCassettaSicurezza\obj\Debug\net6.0-windows\ColomboCassettaSicurezza.genruntimeconfig.cache
+C:\Users\admin\Desktop\CassettaSicurezza\ColomboCassettaSicurezza\ColomboCassettaSicurezza\obj\Debug\net6.0-windows\ref\ColomboCassettaSicurezza.dll
