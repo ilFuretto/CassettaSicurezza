@@ -46,7 +46,7 @@
             // 
             // nomeOggetto
             // 
-            nomeOggetto.Location = new Point(608, 261);
+            nomeOggetto.Location = new Point(702, 317);
             nomeOggetto.Name = "nomeOggetto";
             nomeOggetto.Size = new Size(158, 23);
             nomeOggetto.TabIndex = 0;
@@ -55,9 +55,9 @@
             // 
             tipologiaOggetto.FormattingEnabled = true;
             tipologiaOggetto.Items.AddRange(new object[] { "Oggetto Generico", "Gioiello Prezioso", "Documento Legale", "Chiave Di Accesso" });
-            tipologiaOggetto.Location = new Point(437, 261);
+            tipologiaOggetto.Location = new Point(550, 317);
             tipologiaOggetto.Name = "tipologiaOggetto";
-            tipologiaOggetto.Size = new Size(121, 23);
+            tipologiaOggetto.Size = new Size(131, 23);
             tipologiaOggetto.TabIndex = 1;
             // 
             // radioButton1
@@ -65,7 +65,7 @@
             radioButton1.AutoSize = true;
             radioButton1.BackColor = SystemColors.ActiveBorder;
             radioButton1.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            radioButton1.Location = new Point(388, 60);
+            radioButton1.Location = new Point(421, 56);
             radioButton1.Name = "radioButton1";
             radioButton1.Size = new Size(282, 29);
             radioButton1.TabIndex = 2;
@@ -78,7 +78,7 @@
             radioButton2.AutoSize = true;
             radioButton2.BackColor = SystemColors.ActiveBorder;
             radioButton2.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            radioButton2.Location = new Point(691, 60);
+            radioButton2.Location = new Point(724, 56);
             radioButton2.Name = "radioButton2";
             radioButton2.Size = new Size(279, 29);
             radioButton2.TabIndex = 3;
@@ -90,7 +90,7 @@
             // 
             btnNuovaCassetta.BackColor = Color.Lime;
             btnNuovaCassetta.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            btnNuovaCassetta.Location = new Point(820, 151);
+            btnNuovaCassetta.Location = new Point(301, 160);
             btnNuovaCassetta.Name = "btnNuovaCassetta";
             btnNuovaCassetta.Size = new Size(263, 83);
             btnNuovaCassetta.TabIndex = 4;
@@ -101,7 +101,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(456, 227);
+            label1.Location = new Point(565, 293);
             label1.Name = "label1";
             label1.Size = new Size(92, 21);
             label1.TabIndex = 5;
@@ -111,7 +111,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(623, 227);
+            label2.Location = new Point(718, 293);
             label2.Name = "label2";
             label2.Size = new Size(132, 21);
             label2.TabIndex = 6;
@@ -128,9 +128,9 @@
             // 
             // btnNuovoOggetto
             // 
-            btnNuovoOggetto.BackColor = Color.LimeGreen;
+            btnNuovoOggetto.BackColor = Color.Lime;
             btnNuovoOggetto.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            btnNuovoOggetto.Location = new Point(820, 251);
+            btnNuovoOggetto.Location = new Point(848, 160);
             btnNuovoOggetto.Name = "btnNuovoOggetto";
             btnNuovoOggetto.Size = new Size(263, 83);
             btnNuovoOggetto.TabIndex = 8;
@@ -141,7 +141,7 @@
             // 
             btnEliminaOggetto.BackColor = Color.Red;
             btnEliminaOggetto.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            btnEliminaOggetto.Location = new Point(366, 367);
+            btnEliminaOggetto.Location = new Point(301, 392);
             btnEliminaOggetto.Name = "btnEliminaOggetto";
             btnEliminaOggetto.Size = new Size(263, 83);
             btnEliminaOggetto.TabIndex = 9;
@@ -150,13 +150,13 @@
             // 
             // btnEliminaCassetta
             // 
-            btnEliminaCassetta.BackColor = Color.Salmon;
+            btnEliminaCassetta.BackColor = Color.Red;
             btnEliminaCassetta.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            btnEliminaCassetta.Location = new Point(677, 367);
+            btnEliminaCassetta.Location = new Point(848, 392);
             btnEliminaCassetta.Name = "btnEliminaCassetta";
             btnEliminaCassetta.Size = new Size(263, 83);
             btnEliminaCassetta.TabIndex = 10;
-            btnEliminaCassetta.Text = "RIMUOVI OGGETTO DALLA CASSETTA SELEZIONATA";
+            btnEliminaCassetta.Text = "ELIMINA LA CASSETTA SELEZIONATA";
             btnEliminaCassetta.UseVisualStyleBackColor = false;
             // 
             // label3
@@ -196,7 +196,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1460, 596);
+            ClientSize = new Size(1417, 587);
             Controls.Add(label4);
             Controls.Add(listBox2);
             Controls.Add(label3);
