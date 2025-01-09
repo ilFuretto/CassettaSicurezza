@@ -9,7 +9,7 @@ namespace ColomboCassettaSicurezza
     class DocumentoLegale : OggettoSegreto
     {
         private string tipo;
-        public DocumentoLegale(string id, double valoreDichiarato, string tipo) : base(id, valoreDichiarato)
+        public DocumentoLegale(string id, string nome, double valoreDichiarato, string tipo) : base(id, nome, valoreDichiarato)
         {
             this.tipo = tipo;
             CalcolaValoreAssicurato();
@@ -25,6 +25,10 @@ namespace ColomboCassettaSicurezza
             {
                 ValoreAssicurato = 50;
             }
+        }
+        override public string GetTipo()
+        {
+            return tipo;
         }
     }
 }

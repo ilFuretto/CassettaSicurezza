@@ -9,7 +9,7 @@ namespace ColomboCassettaSicurezza
     class GioielloPrezioso : OggettoSegreto
     {
         private string tipo;
-        public GioielloPrezioso(string id, double valoreDichiarato, string tipo) : base(id, valoreDichiarato)
+        public GioielloPrezioso(string id, string nome, double valoreDichiarato, string tipo) : base(id, nome, valoreDichiarato)
         {
             this.tipo = tipo;
             CalcolaValoreAssicurato();
@@ -18,6 +18,10 @@ namespace ColomboCassettaSicurezza
         override public void CalcolaValoreAssicurato()
         {
             ValoreAssicurato = ValoreDichiarato * 5;
+        }
+        override public string GetTipo()
+        {
+            return tipo;
         }
     }
 }

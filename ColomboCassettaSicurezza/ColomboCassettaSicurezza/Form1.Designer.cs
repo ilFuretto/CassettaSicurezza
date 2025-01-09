@@ -42,6 +42,13 @@
             label3 = new Label();
             label4 = new Label();
             listBox2 = new ListBox();
+            numericUpDown1 = new NumericUpDown();
+            label5 = new Label();
+            textBox1 = new TextBox();
+            label6 = new Label();
+            occupate = new Label();
+            vuote = new Label();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             SuspendLayout();
             // 
             // nomeOggetto
@@ -55,10 +62,11 @@
             // 
             tipologiaOggetto.FormattingEnabled = true;
             tipologiaOggetto.Items.AddRange(new object[] { "Oggetto Generico", "Gioiello Prezioso", "Documento Legale", "Chiave Di Accesso" });
-            tipologiaOggetto.Location = new Point(550, 317);
+            tipologiaOggetto.Location = new Point(544, 317);
             tipologiaOggetto.Name = "tipologiaOggetto";
             tipologiaOggetto.Size = new Size(131, 23);
             tipologiaOggetto.TabIndex = 1;
+            tipologiaOggetto.SelectedIndexChanged += tipologiaOggetto_SelectedIndexChanged;
             // 
             // radioButton1
             // 
@@ -96,6 +104,7 @@
             btnNuovaCassetta.TabIndex = 4;
             btnNuovaCassetta.Text = "AGGIUNGI OGGETTO AD UNA NUOVA CASSETTA";
             btnNuovaCassetta.UseVisualStyleBackColor = false;
+            btnNuovaCassetta.Click += btnNuovaCassetta_Click;
             // 
             // label1
             // 
@@ -136,6 +145,7 @@
             btnNuovoOggetto.TabIndex = 8;
             btnNuovoOggetto.Text = "AGGIUNGI OGGETTO ALLA CASSETTA SELEZIONATA";
             btnNuovoOggetto.UseVisualStyleBackColor = false;
+            btnNuovoOggetto.Click += btnNuovoOggetto_Click;
             // 
             // btnEliminaOggetto
             // 
@@ -147,6 +157,7 @@
             btnEliminaOggetto.TabIndex = 9;
             btnEliminaOggetto.Text = "RIMUOVI OGGETTO DALLA CASSETTA SELEZIONATA";
             btnEliminaOggetto.UseVisualStyleBackColor = false;
+            btnEliminaOggetto.Click += btnEliminaOggetto_Click;
             // 
             // btnEliminaCassetta
             // 
@@ -158,6 +169,7 @@
             btnEliminaCassetta.TabIndex = 10;
             btnEliminaCassetta.Text = "ELIMINA LA CASSETTA SELEZIONATA";
             btnEliminaCassetta.UseVisualStyleBackColor = false;
+            btnEliminaCassetta.Click += btnEliminaCassetta_Click;
             // 
             // label3
             // 
@@ -192,11 +204,78 @@
             listBox2.Size = new Size(292, 529);
             listBox2.TabIndex = 12;
             // 
+            // numericUpDown1
+            // 
+            numericUpDown1.DecimalPlaces = 2;
+            numericUpDown1.Location = new Point(626, 376);
+            numericUpDown1.Maximum = new decimal(new int[] { 999999999, 0, 0, 0 });
+            numericUpDown1.Name = "numericUpDown1";
+            numericUpDown1.Size = new Size(143, 23);
+            numericUpDown1.TabIndex = 14;
+            numericUpDown1.ThousandsSeparator = true;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.Location = new Point(626, 352);
+            label5.Name = "label5";
+            label5.Size = new Size(143, 21);
+            label5.TabIndex = 15;
+            label5.Text = "VALORE OGGETTO";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(544, 542);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(306, 23);
+            textBox1.TabIndex = 16;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.Location = new Point(517, 518);
+            label6.Name = "label6";
+            label6.Size = new Size(363, 21);
+            label6.TabIndex = 17;
+            label6.Text = "INSERISCI IL PIN DELLA CASSETTA SELEZIONATA";
+            // 
+            // occupate
+            // 
+            occupate.AutoSize = true;
+            occupate.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            occupate.ForeColor = Color.Black;
+            occupate.Location = new Point(129, 9);
+            occupate.Name = "occupate";
+            occupate.Size = new Size(30, 21);
+            occupate.TabIndex = 18;
+            occupate.Text = "20";
+            occupate.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // vuote
+            // 
+            vuote.AutoSize = true;
+            vuote.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            vuote.ForeColor = Color.Black;
+            vuote.Location = new Point(1254, 9);
+            vuote.Name = "vuote";
+            vuote.Size = new Size(30, 21);
+            vuote.TabIndex = 19;
+            vuote.Text = "20";
+            vuote.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1417, 587);
+            Controls.Add(vuote);
+            Controls.Add(occupate);
+            Controls.Add(label6);
+            Controls.Add(textBox1);
+            Controls.Add(label5);
+            Controls.Add(numericUpDown1);
             Controls.Add(label4);
             Controls.Add(listBox2);
             Controls.Add(label3);
@@ -213,6 +292,7 @@
             Controls.Add(nomeOggetto);
             Name = "Form1";
             Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -233,5 +313,11 @@
         private Label label3;
         private Label label4;
         private ListBox listBox2;
+        private NumericUpDown numericUpDown1;
+        private Label label5;
+        private TextBox textBox1;
+        private Label label6;
+        private Label occupate;
+        private Label vuote;
     }
 }

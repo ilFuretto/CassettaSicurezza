@@ -9,7 +9,7 @@ namespace ColomboCassettaSicurezza
     class ChiaveDiAccesso : OggettoSegreto
     {
         private string tipo;
-        public ChiaveDiAccesso(string id, double valoreDichiarato, string tipo) : base(id, valoreDichiarato)
+        public ChiaveDiAccesso(string id, string nome, double valoreDichiarato, string tipo) : base(id, nome, valoreDichiarato)
         {
             this.tipo = tipo;
             CalcolaValoreAssicurato();
@@ -18,6 +18,10 @@ namespace ColomboCassettaSicurezza
         override public void CalcolaValoreAssicurato()
         {
             ValoreAssicurato = ValoreDichiarato * 1000;
+        }
+        override public string GetTipo()
+        {
+            return tipo;
         }
     }
 }
