@@ -12,32 +12,34 @@ namespace ColomboCassettaSicurezza
         { }
 
         public CassettaDiSicurezzaSpeciale(string codiceSeriale, string pin, OggettoSegreto oggetto) : base(codiceSeriale, pin, oggetto)
-        { }
-
-            override public void CalcolaValoreAssicurato()
         {
-            OggettoSegreto oggetto = Oggetto;
+            CalcolaValoreAssicurato();
+        }
 
-            if (oggetto == null)
+
+        override public void CalcolaValoreAssicurato()
+        {
+            if (Oggetto == null)
             {
                 ValoreAssicurato = 0.0;
             }
-            else if (oggetto is GioielloPrezioso)
+            else if (Oggetto is GioielloPrezioso)
             {
-                ValoreAssicurato = ValoreAssicurato * 0.9;
+                ValoreAssicurato = Oggetto.ValoreAssicurato * 0.9;  // Sconto del 10% per gioielli preziosi
             }
-            else if (oggetto is DocumentoLegale)
+            else if (Oggetto is DocumentoLegale)
             {
-                ValoreAssicurato = ValoreAssicurato * 0.8;
+                ValoreAssicurato = Oggetto.ValoreAssicurato * 0.8;  // Sconto del 20% per documenti legali
             }
-            else if (oggetto is ChiaveDiAccesso)
+            else if (Oggetto is ChiaveDiAccesso)
             {
-                ValoreAssicurato = ValoreAssicurato * 0.7;
+                ValoreAssicurato = Oggetto.ValoreAssicurato * 0.7;  // Sconto del 30% per chiavi di accesso
             }
             else
             {
-                ValoreAssicurato = 0.0;
+                ValoreAssicurato = Oggetto.ValoreAssicurato;  // Se l'oggetto è generico, non applicare sconto
             }
         }
+
     }
 }

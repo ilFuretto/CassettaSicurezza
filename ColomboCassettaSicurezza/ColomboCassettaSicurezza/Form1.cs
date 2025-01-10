@@ -79,7 +79,7 @@ namespace ColomboCassettaSicurezza
 
             id++;
             cassetteSicurezza.Add(cassetta);
-            MessageBox.Show(cassetta.CodiceSeriale + cassetta.Oggetto.Nome + cassetta.Oggetto.ValoreDichiarato + cassetta.Oggetto.Id + cassetta.Oggetto.ValoreAssicurato);
+ 
             AggiornaGrafica("nuovaCassetta");
         }
 
@@ -88,12 +88,13 @@ namespace ColomboCassettaSicurezza
             if (listBox2.SelectedItem == null || nomeOggetto.Text == "" || numericUpDown1.Value <= 0 || tipologiaOggetto.SelectedItem == null)
                 return;
             CreaOggetto();
-
+            MessageBox.Show(oggettoSegreto.GetTipo());
             indiceCassettaSelezionata = listBox2.SelectedIndex;
             cassetta = cassetteSicurezzaVuote[indiceCassettaSelezionata];
 
-            cassetteSicurezzaVuote.Remove(cassetta);
             cassetta.InserisciOggetto(oggettoSegreto, textBox1.Text);
+
+            cassetteSicurezzaVuote.Remove(cassetta);
             cassetteSicurezza.Add(cassetta);
 
             AggiornaGrafica("nuovoOggetto");
@@ -107,8 +108,11 @@ namespace ColomboCassettaSicurezza
             indiceCassettaSelezionata = listBox1.SelectedIndex;
             cassetta = cassetteSicurezza[indiceCassettaSelezionata];
 
-            cassetteSicurezza.Remove(cassetta);
             cassetta.RimuoviOggetto(textBox1.Text);
+            if (cassetta.Oggetto != null)
+                return;
+
+            cassetteSicurezza.Remove(cassetta);
             cassetteSicurezzaVuote.Add(cassetta);
 
             AggiornaGrafica("rimuoviOggetto");
@@ -116,7 +120,8 @@ namespace ColomboCassettaSicurezza
 
         private void btnEliminaCassetta_Click(object sender, EventArgs e)
         {
-
+            if (cassetta.ControllaPin(textBox1.Text) == false)
+                return;
         }
 
         private void tipologiaOggetto_SelectedIndexChanged(object sender, EventArgs e)

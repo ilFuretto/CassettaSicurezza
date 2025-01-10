@@ -45,9 +45,17 @@ namespace ColomboCassettaSicurezza
             CalcolaValoreAssicurato();
         }
 
+        public bool ControllaPin(string pin)
+        {
+            if (this.pin == pin)
+                return true;
+            else 
+                return false;
+        }
+
         public void InserisciOggetto(OggettoSegreto oggetto, string pin)
         {
-            if (this.pin == pin && this.oggetto != null)
+            if (ControllaPin(pin) == true && this.oggetto == null)
             {
                 this.oggetto = oggetto;
                 CalcolaValoreAssicurato();
@@ -58,7 +66,7 @@ namespace ColomboCassettaSicurezza
 
         public void RimuoviOggetto(string pin)
         {
-            if (this.pin == pin && this.oggetto != null)
+            if (ControllaPin(pin) == true && this.oggetto != null)
             {
                 this.oggetto = null;
             }

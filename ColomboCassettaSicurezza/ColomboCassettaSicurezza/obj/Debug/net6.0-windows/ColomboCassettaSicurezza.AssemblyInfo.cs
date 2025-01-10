@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ColomboCassettaSicurezza")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b17ddd5a8a91d49b0c7e86f8b81b3019a7c224a6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("ColomboCassettaSicurezza")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ColomboCassettaSicurezza")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
