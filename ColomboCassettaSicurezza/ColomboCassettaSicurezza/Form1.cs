@@ -134,10 +134,10 @@ namespace ColomboCassettaSicurezza
 
                 if (radioButtonCassettePiene.Checked)
                 {
-                    if (listBox2.SelectedItem == null)
+                    if (listBox1.SelectedItem == null)
                         return;
 
-                    indiceCassettaSelezionata = listBox2.SelectedIndex;
+                    indiceCassettaSelezionata = listBox1.SelectedIndex;
                     cassetta = cassetteSicurezza[indiceCassettaSelezionata];
 
                     cassetteSicurezza.Remove(cassetta);
