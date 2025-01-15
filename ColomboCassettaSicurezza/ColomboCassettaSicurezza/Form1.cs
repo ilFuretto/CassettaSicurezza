@@ -29,15 +29,24 @@ namespace ColomboCassettaSicurezza
                 listBox2.Items.Remove(listBox2.Items[indiceCassettaSelezionata]);
                 listBox1.Items.Add(cassetta.Oggetto.GetTipo() + " - valore assicurato: " + cassetta.ValoreAssicurato + " euro");
             }
-            else if(operazione == "rimuoviOggetto")
+            else if (operazione == "rimuoviOggetto")
             {
                 listBox1.Items.Remove(listBox1.Items[indiceCassettaSelezionata]);
-                if(cassetta is CassettaDiSicurezzaSpeciale)
+                if (cassetta is CassettaDiSicurezzaSpeciale)
                     listBox2.Items.Add("Cassetta di Sicurezza Speciale");
                 else
                     listBox2.Items.Add("Cassetta di Sicurezza Normale");
             }
-                
+            else if (operazione == "rimuoviCassetta")
+            {
+                if (radioButtonCassettePiene.Checked)
+                {
+                    listBox1.Items.RemoveAt(indiceCassettaSelezionata);
+                }
+                else
+                    listBox2.Items.Remove(listBox2.Items[indiceCassettaSelezionata]);
+            }
+
         }
 
         private void TipoCassetta()
@@ -66,7 +75,7 @@ namespace ColomboCassettaSicurezza
 
         private void btnNuovaCassetta_Click(object sender, EventArgs e)
         {
-            if ((radioButton1.Checked==false&& radioButton2.Checked==false) || nomeOggetto.Text == "" || tipologiaOggetto.SelectedItem ==null || numericUpDown1.Value<=0)
+            if ((radioButton1.Checked == false && radioButton2.Checked == false) || nomeOggetto.Text == "" || tipologiaOggetto.SelectedItem == null || numericUpDown1.Value <= 0)
                 return;
 
             TipoCassetta();
@@ -79,7 +88,7 @@ namespace ColomboCassettaSicurezza
 
             id++;
             cassetteSicurezza.Add(cassetta);
- 
+
             AggiornaGrafica("nuovaCassetta");
         }
 
@@ -88,7 +97,7 @@ namespace ColomboCassettaSicurezza
             if (listBox2.SelectedItem == null || nomeOggetto.Text == "" || numericUpDown1.Value <= 0 || tipologiaOggetto.SelectedItem == null)
                 return;
             CreaOggetto();
-            MessageBox.Show(oggettoSegreto.GetTipo());
+
             indiceCassettaSelezionata = listBox2.SelectedIndex;
             cassetta = cassetteSicurezzaVuote[indiceCassettaSelezionata];
 
@@ -120,9 +129,32 @@ namespace ColomboCassettaSicurezza
 
         private void btnEliminaCassetta_Click(object sender, EventArgs e)
         {
-            if (cassetta.ControllaPin(textBox1.Text) == false)
-                return;
-        }
+                if (cassetta.ControllaPin(textBox1.Text) == false || (radioButtonCassettePiene.Checked == false && radioButtonCassetteVuote.Checked == false))
+                    return;
+
+                if (radioButtonCassettePiene.Checked)
+                {
+                    if (listBox2.SelectedItem == null)
+                        return;
+
+                    indiceCassettaSelezionata = listBox2.SelectedIndex;
+                    cassetta = cassetteSicurezza[indiceCassettaSelezionata];
+
+                    cassetteSicurezza.Remove(cassetta);
+                }
+                else if (radioButtonCassetteVuote.Checked)
+                {
+                    if (listBox2.SelectedItem == null)
+                        return;
+
+                    indiceCassettaSelezionata = listBox2.SelectedIndex;
+                    cassetta = cassetteSicurezzaVuote[indiceCassettaSelezionata];
+
+                    cassetteSicurezzaVuote.Remove(cassetta);
+                }
+
+                AggiornaGrafica("rimuoviCassetta");
+            }
 
         private void tipologiaOggetto_SelectedIndexChanged(object sender, EventArgs e)
         {

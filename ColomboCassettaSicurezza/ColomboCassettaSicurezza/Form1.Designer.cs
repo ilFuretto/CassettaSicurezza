@@ -48,6 +48,8 @@
             label6 = new Label();
             occupate = new Label();
             vuote = new Label();
+            radioButtonCassetteVuote = new RadioButton();
+            radioButtonCassettePiene = new RadioButton();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             SuspendLayout();
             // 
@@ -265,11 +267,39 @@
             vuote.Text = "20";
             vuote.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // radioButtonCassetteVuote
+            // 
+            radioButtonCassetteVuote.AutoSize = true;
+            radioButtonCassetteVuote.BackColor = SystemColors.ActiveBorder;
+            radioButtonCassetteVuote.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            radioButtonCassetteVuote.Location = new Point(856, 481);
+            radioButtonCassetteVuote.Name = "radioButtonCassetteVuote";
+            radioButtonCassetteVuote.Size = new Size(125, 24);
+            radioButtonCassetteVuote.TabIndex = 20;
+            radioButtonCassetteVuote.TabStop = true;
+            radioButtonCassetteVuote.Text = "Cassetta vuota";
+            radioButtonCassetteVuote.UseVisualStyleBackColor = false;
+            // 
+            // radioButtonCassettePiene
+            // 
+            radioButtonCassettePiene.AutoSize = true;
+            radioButtonCassettePiene.BackColor = SystemColors.ActiveBorder;
+            radioButtonCassettePiene.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            radioButtonCassettePiene.Location = new Point(987, 481);
+            radioButtonCassettePiene.Name = "radioButtonCassettePiene";
+            radioButtonCassettePiene.Size = new Size(124, 24);
+            radioButtonCassettePiene.TabIndex = 21;
+            radioButtonCassettePiene.TabStop = true;
+            radioButtonCassettePiene.Text = "Cassetta piena";
+            radioButtonCassettePiene.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1417, 587);
+            Controls.Add(radioButtonCassettePiene);
+            Controls.Add(radioButtonCassetteVuote);
             Controls.Add(vuote);
             Controls.Add(occupate);
             Controls.Add(label6);
@@ -319,5 +349,7 @@
         private Label label6;
         private Label occupate;
         private Label vuote;
+        private RadioButton radioButtonCassetteVuote;
+        private RadioButton radioButtonCassettePiene;
     }
 }
